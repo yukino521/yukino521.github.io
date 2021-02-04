@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukino521.github.io</id>
     <title>Yukino</title>
-    <updated>2021-02-04T03:40:57.063Z</updated>
+    <updated>2021-02-04T05:55:10.712Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukino521.github.io"/>
     <link rel="self" href="https://yukino521.github.io/atom.xml"/>
@@ -16,24 +16,25 @@
         <link href="https://yukino521.github.io/post/gan-diao-macos-bigsur-geng-xin-tong-zhi/">
         </link>
         <updated>2021-02-04T03:14:05.000Z</updated>
-        <content type="html"><![CDATA[<p>#1.查看SIP状态<br>
+        <content type="html"><![CDATA[<p><strong>1.查看SIP状态</strong><br>
 在终端中输入csrutil status，就可以查看sip状态，如果sip是开启状态，需要进行关闭。<br>
-#2.关闭SIP<br>
+<strong>2.关闭SIP</strong><br>
 重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；<br>
 在屏幕最上方的工具栏找到实用工具，打开终端，输入：csrutil disable；<br>
 关掉终端，重启mac；<br>
 重启以后可以在终端中查看状态确认；<br>
-#3.屏蔽bigsur更新通知<br>
-打开终端，输入：<br>
+<strong>3.屏蔽bigsur更新通知</strong><br>
+打开终端，输入以下命令即可：<br>
 <code>sudo mount -uw /</code><br>
 <code>sudo chmod 600 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Versions/A/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager</code><br>
 <code>defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</code><br>
 <code>killall Dock</code><br>
-如果你已经吊销了系统自动更新提示进程的权限，又后悔了，想要恢复，输入以下命令即可。<br>
+这样就完成了屏蔽更新通知，如果想要恢复，输入以下命令即可。<br>
 <code>sudo mount -uw /</code><br>
 <code>sudo chmod 777 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Versions/A/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager</code><br>
 <code>defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</code><br>
-<code>killall Dock</code></p>
+<code>killall Dock</code><br>
+<img src="https://yukino521.github.io/post-images/1612410519940.jpg" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
