@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>解决mac睡眠失败的问题 | Yukino</title>
+<title>彻底干掉macos bigsur更新通知 | Yukino</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,11 @@
 
 
 
-    <meta name="description" content="我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原装的硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和..." />
+    <meta name="description" content="#1.查看SIP状态
+在终端中输入csrutil status，就可以查看sip状态，如果sip是开启状态，需要进行关闭。
+#2.关闭SIP
+重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；
+在屏幕最上..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -90,14 +94,40 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">解决mac睡眠失败的问题</h2>
-            <div class="post-date">2021-02-02</div>
+            <h2 class="post-title">彻底干掉macos bigsur更新通知</h2>
+            <div class="post-date">2021-02-04</div>
             
             <div class="post-content" v-pre>
-              <p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原装的硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。</p>
+              <p>#1.查看SIP状态<br>
+在终端中输入csrutil status，就可以查看sip状态，如果sip是开启状态，需要进行关闭。<br>
+#2.关闭SIP<br>
+重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；<br>
+在屏幕最上方的工具栏找到实用工具，打开终端，输入：csrutil disable；<br>
+关掉终端，重启mac；<br>
+重启以后可以在终端中查看状态确认；<br>
+#3.屏蔽bigsur更新通知<br>
+打开终端，输入：<br>
+<code>sudo mount -uw /</code><br>
+<code>sudo chmod 600 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Versions/A/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager</code><br>
+<code>defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</code><br>
+<code>killall Dock</code><br>
+如果你已经吊销了系统自动更新提示进程的权限，又后悔了，想要恢复，输入以下命令即可。<br>
+<code>sudo mount -uw /</code><br>
+<code>sudo chmod 777 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Versions/A/Resources/SoftwareUpdateNotificationManager.app/Contents/MacOS/SoftwareUpdateNotificationManager</code><br>
+<code>defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</code><br>
+<code>killall Dock</code></p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yukino521.github.io/post/jie-jue-mac-shui-mian-shi-bai-de-wen-ti/">
+                  <h3 class="post-title">
+                    解决mac睡眠失败的问题
+                  </h3>
+                </a>
+              </div>
             
 
             
