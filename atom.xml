@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukino521.github.io</id>
     <title>Yukino</title>
-    <updated>2021-02-07T03:31:35.191Z</updated>
+    <updated>2021-02-07T03:39:47.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukino521.github.io"/>
     <link rel="self" href="https://yukino521.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>Yukino的个人博客</subtitle>
     <logo>https://yukino521.github.io/images/avatar.png</logo>
     <icon>https://yukino521.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Yukino</rights>
