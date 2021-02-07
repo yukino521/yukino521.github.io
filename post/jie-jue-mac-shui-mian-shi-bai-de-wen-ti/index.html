@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>解决mac睡眠失败的问题 | Yukino</title>
-<link rel="shortcut icon" href="https://yukino521.github.io/favicon.ico?v=1612669167600">
+<link rel="shortcut icon" href="https://yukino521.github.io/favicon.ico?v=1612669437692">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://yukino521.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="解决mac睡眠失败的问题 | Yukino - Atom Feed" href="https://yukino521.github.io/atom.xml">
@@ -12,7 +12,7 @@
 
 
     <meta name="description" content="我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和S..." />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="Mac" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -21,7 +21,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://yukino521.github.io">
-  <img class="avatar" src="https://yukino521.github.io/images/avatar.png?v=1612669167600" alt="">
+  <img class="avatar" src="https://yukino521.github.io/images/avatar.png?v=1612669437692" alt="">
   </a>
   <h1 class="site-title">
     Yukino
@@ -84,6 +84,10 @@
                 2 min read
               </span>
               
+                <a href="https://yukino521.github.io/tag/hUJffq8wZ/" class="post-tag">
+                  # Mac
+                </a>
+              
             </div>
             
               <img class="post-feature-image" src="https://yukino521.github.io/post-images/jie-jue-mac-shui-mian-shi-bai-de-wen-ti.jpg" alt="">
@@ -91,7 +95,6 @@
             <div class="post-content-wrapper">
               <div class="post-content">
                 <p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。后来研究了macos 的睡眠策略，发现mac在深度睡眠（休眠）时会把内存中的内容写入硬盘，而我又更换过非原厂硬盘，睡眠唤醒失败肯定发生在休眠阶段。。要想解决这个问题只能换成原厂硬盘或者把休眠禁用掉。我的解决办法是直接禁用休眠，毕竟换原厂硬盘成本高性能还差。</p>
-<figure data-type="image" tabindex="1"><img src="https://yukino521.github.io/post-images/1612667799419.jpg" alt="" loading="lazy"></figure>
 <p>打开终端，输入以下命令：<br>
 查看当前所有睡眠计划<br>
 <code>pmset -g custom</code><br>
