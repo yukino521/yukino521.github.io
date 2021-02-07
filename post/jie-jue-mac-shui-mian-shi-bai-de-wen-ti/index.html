@@ -1,103 +1,96 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>解决mac睡眠失败的问题 | Yukino</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yukino521.github.io/favicon.ico?v=1612667999091">
+<link rel="shortcut icon" href="https://yukino521.github.io/favicon.ico?v=1612668663796">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://yukino521.github.io/styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="解决mac睡眠失败的问题 | Yukino - Atom Feed" href="https://yukino521.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
     <meta name="description" content="我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和S..." />
     <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://yukino521.github.io">
-        <img src="https://yukino521.github.io/images/avatar.png?v=1612667999091" class="site-logo">
-        <h1 class="site-title">Yukino</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yukino521.github.io">
+  <img class="avatar" src="https://yukino521.github.io/images/avatar.png?v=1612668663796" alt="">
+  </a>
+  <h1 class="site-title">
+    Yukino
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
+        <a href="/" class="menu">
+          首页
+        </a>
       
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
+        <a href="/archives" class="menu">
+          归档
+        </a>
       
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
+    
       
-    </div>
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      温故而知新
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yukino521.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">解决mac睡眠失败的问题</h2>
-            <div class="post-date">2021-02-02</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              解决mac睡眠失败的问题
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-02-02
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
             
-              <div class="feature-container" style="background-image: url('https://yukino521.github.io/post-images/jie-jue-mac-shui-mian-shi-bai-de-wen-ti.jpg')">
-              </div>
+              <img class="post-feature-image" src="https://yukino521.github.io/post-images/jie-jue-mac-shui-mian-shi-bai-de-wen-ti.jpg" alt="">
             
-            <div class="post-content" v-pre>
-              <p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。后来研究了macos 的睡眠策略，发现mac在深度睡眠（休眠）时会把内存中的内容写入硬盘，而我又更换过非原厂硬盘，睡眠唤醒失败肯定发生在休眠阶段。。要想解决这个问题只能换成原厂硬盘或者把休眠禁用掉。我的解决办法是直接禁用休眠，毕竟换原厂硬盘成本高性能还差。</p>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。后来研究了macos 的睡眠策略，发现mac在深度睡眠（休眠）时会把内存中的内容写入硬盘，而我又更换过非原厂硬盘，睡眠唤醒失败肯定发生在休眠阶段。。要想解决这个问题只能换成原厂硬盘或者把休眠禁用掉。我的解决办法是直接禁用休眠，毕竟换原厂硬盘成本高性能还差。</p>
 <figure data-type="image" tabindex="1"><img src="https://yukino521.github.io/post-images/1612667799419.jpg" alt="" loading="lazy"></figure>
 <p>打开终端，输入以下命令：<br>
 查看当前所有睡眠计划<br>
@@ -109,36 +102,67 @@
 <code>sudo rm /var/vm/sleepimage</code></p>
 <p>这样禁用休眠后，耗电量会多一些，一晚上待机耗电2%。不过我对耗电不敏感，总比唤醒重启好多了。。</p>
 
+              </div>
+              <div class="toc-container">
+                
+              </div>
             </div>
-            
-            
-
-            
-
-          </div>
-
+          </article>
         </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://yukino521.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+    <script>
+      hljs.initHighlightingOnLoad()
 
-AOS.init();
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-</script>
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
-
-
-
+    </script>
   </body>
 </html>
