@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukino521.github.io</id>
     <title>Yukino</title>
-    <updated>2021-02-04T05:55:10.712Z</updated>
+    <updated>2021-02-07T03:17:08.701Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukino521.github.io"/>
     <link rel="self" href="https://yukino521.github.io/atom.xml"/>
@@ -43,7 +43,17 @@
         <link href="https://yukino521.github.io/post/jie-jue-mac-shui-mian-shi-bai-de-wen-ti/">
         </link>
         <updated>2021-02-02T08:06:21.000Z</updated>
-        <content type="html"><![CDATA[<p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原装的硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。</p>
+        <content type="html"><![CDATA[<p>我所使用的mac是一台13年的mbp15（me293），换了三星970EVO硬盘，速度比原厂硬盘快两倍。然而最近经常遇到睡眠失败的问题，睡眠唤醒提示Sleep Wake failure in EFI。。为了解决这个问题，重置过NVRAM和SMC，抹盘重装过系统，问题仍然存在。后来研究了macos 的睡眠策略，发现mac在深度睡眠（休眠）时会把内存中的内容写入硬盘，而我又更换过非原厂硬盘，睡眠唤醒失败肯定发生在休眠阶段。。要想解决这个问题只能换成原厂硬盘或者把休眠禁用掉。我的解决办法是直接禁用休眠，毕竟换原厂硬盘成本高性能还差。</p>
+<figure data-type="image" tabindex="1"><img src="https://yukino521.github.io/post-images/1612667799419.jpg" alt="" loading="lazy"></figure>
+<p>打开终端，输入以下命令：<br>
+查看当前所有睡眠计划<br>
+<code>pmset -g custom</code><br>
+禁用休眠<br>
+<code>sudo pmset -a hibernatemode 0</code><br>
+<code>sudo pmset -a autopoweroff 0</code>  <br>
+<code>sudo pmset -a standby 0</code>  <br>
+<code>sudo rm /var/vm/sleepimage</code></p>
+<p>这样禁用休眠后，耗电量会多一些，一晚上待机耗电2%。不过我对耗电不敏感，总比唤醒重启好多了。。</p>
 ]]></content>
     </entry>
 </feed>
