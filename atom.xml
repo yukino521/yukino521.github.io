@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yukino521.github.io</id>
     <title>Yukino</title>
-    <updated>2021-02-07T03:44:02.188Z</updated>
+    <updated>2021-03-12T03:36:11.446Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yukino521.github.io"/>
     <link rel="self" href="https://yukino521.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://yukino521.github.io/images/avatar.png</logo>
     <icon>https://yukino521.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Yukino</rights>
+    <entry>
+        <title type="html"><![CDATA[Alienware M17xr4刷破解版bios教程]]></title>
+        <id>https://yukino521.github.io/post/alienware-m17xr4-shua-po-jie-ban-bios-jiao-cheng/</id>
+        <link href="https://yukino521.github.io/post/alienware-m17xr4-shua-po-jie-ban-bios-jiao-cheng/">
+        </link>
+        <updated>2021-03-12T03:30:10.000Z</updated>
+        <content type="html"><![CDATA[<p>先下载附件里的东西，用UltraISO制作dos启动盘，再将里面所需的文件拷贝到u盘根目录，启动u盘，进入以下界面：<br>
+<img src="https://yukino521.github.io/post-images/1615519946347.jpeg" alt="" loading="lazy"><br>
+选择第4项<br>
+<img src="https://yukino521.github.io/post-images/1615519979084.jpeg" alt="" loading="lazy"><br>
+如果提示错误，按A键即可，两次A<br>
+<img src="https://yukino521.github.io/post-images/1615520024280.jpeg" alt="" loading="lazy"><br>
+输入c: 回车<br>
+<img src="https://yukino521.github.io/post-images/1615520063523.jpeg" alt="" loading="lazy"><br>
+输入prr回车<br>
+<img src="https://yukino521.github.io/post-images/1615520084475.jpeg" alt="" loading="lazy"><br>
+输入flash.bat回车<br>
+<img src="https://yukino521.github.io/post-images/1615520124015.jpeg" alt="" loading="lazy"><br>
+更新完毕</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[彻底干掉macos bigsur更新通知]]></title>
         <id>https://yukino521.github.io/post/gan-diao-macos-bigsur-geng-xin-tong-zhi/</id>
